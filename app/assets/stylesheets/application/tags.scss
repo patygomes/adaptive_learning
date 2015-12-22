@@ -1,0 +1,87 @@
+// Reset box model to make styling easier later.
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  // Required for full browser width bars
+  // http://css-tricks.com/full-browser-width-bars/
+  @include non-phone {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  color: $color-333;
+  @include font-size($md-sizes);
+  font-family: $font-family;
+  background-color:$color-fff;
+}
+::selection {
+  color:$color-fff;
+  background:$color-green-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+hr {
+  border: 0;
+}
+
+a {
+  @include anchor-default-with-color($color-green-dark);
+}
+
+// Taken from Inuit (which also applies the style directly to the `img` tag):
+// https://github.com/inuitcss/base.images/blob/c6fe0243793dcf09dbfa8e33596d21b9f0b924e6/_base.images.scss#L12
+//
+// - If you remove this, all images in our code will be un-responsive.
+// - Prefer this over adding a class to make images responsive.
+img {
+  max-width: 100%;
+  vertical-align: middle;
+
+  // If width or height is specified, then max width should be none.
+  //
+  // Also taken from Inuit:
+  // https://github.com/inuitcss/base.images/blob/c6fe0243793dcf09dbfa8e33596d21b9f0b924e6/_base.images.scss#L23
+  //
+  // To have the opposite behavior, add `height: auto` to `img`:
+  // https://github.com/twbs/bootstrap/issues/1899#issuecomment-4417797
+  &[width],
+  &[height] {
+    max-width: none;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}

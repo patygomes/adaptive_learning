@@ -1,0 +1,250 @@
+// COPIED FROM EdSurge as of Dec 21, 2015
+
+
+// ========================================================
+// Colors
+// ========================================================
+$color-111: #111;
+$color-333: #333;
+$color-666: #666;
+$color-777: #777;
+$color-999: #999;
+$color-aaa: #aaa;
+$color-ccc: #ccc;
+$color-ddd: #ddd;
+$color-eee: #eee;
+$color-f3f: #f3f3f3;
+$color-fbf: #fbfbfb;
+$color-fff: #fff;
+
+$color-green-xdark: #0E876F;
+$color-green-dark: #00997a;
+$color-green-light: #88b4ab;
+$color-green-med: #4BA694;
+$color-green-medlight: #a1e5d8;
+$color-green-xlight: #e4edec;
+$color-green-lightsat: #b4f0d1;
+$color-green-dark-desat: #628c84;
+
+$color-tinted-gray: #828C8B;
+$color-tinted-gray-dark: #313534;
+
+$color-new: #08c;
+$color-new-light: #e2eaee;
+$color-highlight: #ffc;
+
+$color-alert: #903;
+$color-alert-pink: #909;
+$color-success: #093;
+$color-warn: #c09853;
+$color-info: #2d6f90;
+
+$color-positive: #093;
+$color-negative: #903;
+
+$color-twitter: #00aced;
+$color-facebook: #3b5b99;
+$color-gplus: #dd4b39;
+$color-pinterest: #bd081c;
+$color-email: $color-green-light;
+$color-comment: $color-fff;
+
+$color-curriculum: #ee7159;
+$color-classroom: #68a73e;
+$color-school: #7a9db9;
+$color-apps: #b49500;
+$color-college: #ad8ad1;
+
+$color-sector-edtech-business: #00536f;
+$color-sector-technology-in-school: #00997a;
+$color-sector-learning-strategies: #86d34a;
+$color-sector-postsecondary-learning: #888888;
+$color-sector-community: #f39040;
+$color-sector-policy: #994400;
+$color-sector-research: #008bb9;
+
+
+// ========================================================
+// Fonts
+// ========================================================
+$font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$font-family-serif: "Merriweather", Georgia, "Times New Roman", serif;
+
+$vertical-rhythm: 6px;
+
+$xl-sizes: 48px $vertical-rhythm * 9;
+$h1-sizes: 36px $vertical-rhythm * 7;
+$h2-sizes: 30px $vertical-rhythm * 6;
+$h3-sizes: 24px $vertical-rhythm * 5;
+$h4-sizes: 21px $vertical-rhythm * 5;
+$h5-sizes: 18px $vertical-rhythm * 4;
+$h6-sizes: 16px $vertical-rhythm * 4;
+$lg-sizes: 16px $vertical-rhythm * 4;
+$md-sizes: 14px $vertical-rhythm * 3.5;
+$sm-sizes: 12px $vertical-rhythm * 3;
+$xs-sizes: 11px $vertical-rhythm * 3;
+
+// For use without font-size() mixin
+$h3-size: 24px;
+$md-size: 14px;
+$caption-size: 13px;
+
+// ========================================================
+// Dimensions
+// ========================================================
+$space-xs:  $vertical-rhythm / 2;  // 3px
+$space-sm:  $vertical-rhythm * 1;  // 6px
+$space-md:  $vertical-rhythm * 2;  // 12px
+$space-lg:  $vertical-rhythm * 3;  // 18px
+$space-xl:  $vertical-rhythm * 5;  // 30px
+$space-xxl: $vertical-rhythm * 10;  // 60px
+
+$icon-20: 20px;
+$icon-25: 25px;
+$icon-35: 35px;
+$icon-50: 50px;
+$icon-75: 75px;
+$icon-100: 100px;
+$icon-150: 150px;
+$icon-200: 200px;
+
+$radius-2: 2px;
+$radius-5: 5px;
+
+$divider-border-default: 2px solid $color-eee;
+$divider-border-dark: 1px solid $color-ccc;
+
+// ========================================================
+// Others
+// ========================================================
+$z-10: 10;
+$z-1000: 1000;
+$z-1001: 1001;
+
+// ========================================================
+// Shared Variables
+// ========================================================
+$navbar__height: 48px;
+$navbar__logo-max-height: 24px;
+$navbar__search-bolt-size: 24px;
+$navbar__search-input-width: 200px;
+$navbar__search-input-max-width: 700px;
+$navbar__search-input-mobile-max-width: 296px;
+$navbar__search-input-side-padding: $space-sm + $space-xs; // Pixel perfect adjustment
+$navbar__logo-width: 108px;
+$navbar__logo-mobile-width: 126px;
+$navbar__item-padding: 9px;
+
+$navbar-border-bottom: 3px;
+$navbar-margin-bottom: $space-xl;
+
+$navbar-height-no-border: $navbar__logo-max-height + $space-md * 2;
+$navbar-height: $navbar__logo-max-height + $space-md * 2;
+$navbar-height-no-border-sm: $navbar__logo-max-height + ($space-md * 2) - 2;
+
+$container-outer-width: 1024px;
+$container-inner-width: 1000px;
+$container-padding: ($container-outer-width - $container-inner-width)/2;
+$container-material-padding: 20px 24px;
+$container-material-header-height: 71px;
+
+$homepage__feeditem__info-width: 360px;
+$feeditem__info-width: 60px;
+$feeditem-margin-bottom: $space-lg;
+$feeditem-padding-bottom: $space-lg;
+
+$textblock__right-margin-space: 15%;
+$post__right-margin-space: 37.5%;
+
+// ========================================================
+// Mixins
+// ========================================================
+@mixin font-size($sizes){
+  font-size: nth($sizes, 1);
+  line-height: nth($sizes, 2)/nth($sizes, 1);
+  letter-spacing: -1 * floor(nth($sizes, 1)/30px) + px;
+}
+
+@mixin margin-bottom($sizes, $ignore-last-child: true, $multiplier: 0.5) {
+  @include spaced-row(nth($sizes, 2) * $multiplier, $ignore-last-child);
+}
+
+@mixin spaced-row($size, $ignore-last-child: true) {
+  margin-bottom: $size;
+  @if $ignore-last-child {
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+@mixin spaced-col($size, $ignore-last-child: true) {
+  margin-right: $size;
+  @if $ignore-last-child {
+    &:last-child { margin-right: 0; }
+  }
+}
+
+@mixin anchor-hover {
+  &:hover, &:focus, &:active { @content; }
+}
+
+@mixin anchor-all {
+  &, &:hover, &:focus, &:active { @content; }
+}
+
+@mixin anchor-default-with-color($color) {
+  text-decoration: none;
+  @include anchor-hover {
+    text-decoration: underline;
+  }
+  @include anchor-all {
+    color: $color;
+  }
+}
+
+@mixin anchor-quiet {
+  color: inherit;
+  @include anchor-hover {
+    color: $color-green-dark;
+  }
+  @include anchor-all {
+    text-decoration: none;
+  }
+}
+
+@mixin anchor-clear-styles {
+  @include anchor-all {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+$phone-max: 767px;
+$tablet-min: $phone-max + 1;
+$tablet-max: 991px;
+$desktop-min: $tablet-max + 1;
+
+@mixin phone { @media screen and (max-width: $phone-max) { @content; } }
+@mixin tablet { @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) { @content; } }
+@mixin desktop { @media screen and (min-width: $desktop-min) { @content; } }
+@mixin non-phone { @media screen and (min-width: $tablet-min) { @content; } }
+@mixin non-tablet { @media screen and (max-width: $phone-max), screen and (min-width: $desktop-min) { @content; } }
+@mixin non-desktop { @media screen and (max-width: $tablet-max) { @content; } }
+
+@mixin hidden-phone { @include phone { display: none !important; }}
+@mixin hidden-tablet { @include tablet { display: none !important; }}
+@mixin hidden-desktop { @include desktop { display: none !important; }}
+@mixin hidden-non-phone { @include non-phone { display: none !important; }}
+@mixin hidden-non-tablet { @include non-tablet { display: none !important; }}
+@mixin hidden-non-desktop { @include non-desktop { display: none !important; }}
