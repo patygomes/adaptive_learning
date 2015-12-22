@@ -248,3 +248,97 @@ $desktop-min: $tablet-max + 1;
 @mixin hidden-non-phone { @include non-phone { display: none !important; }}
 @mixin hidden-non-tablet { @include non-tablet { display: none !important; }}
 @mixin hidden-non-desktop { @include non-desktop { display: none !important; }}
+
+.h1 { @include font-size($h1-sizes); @include margin-bottom($h1-sizes); }
+.h2 { @include font-size($h2-sizes); @include margin-bottom($h2-sizes); }
+.h3 { @include font-size($h3-sizes); @include margin-bottom($h3-sizes); }
+.h4 { @include font-size($h4-sizes); @include margin-bottom($h4-sizes); }
+.h5 { @include font-size($h5-sizes); @include margin-bottom($h5-sizes); }
+.h6 { @include font-size($h6-sizes); @include margin-bottom($h6-sizes); }
+.hm { @include font-size($md-sizes); @include margin-bottom($md-sizes); }
+
+@include phone {
+.h1 { @include font-size($h4-sizes); @include margin-bottom($h1-sizes); }
+.h2 { @include font-size($h4-sizes); @include margin-bottom($h2-sizes); }
+.h3 { @include font-size($h5-sizes); @include margin-bottom($h3-sizes); }
+.h4 { @include font-size($h6-sizes); @include margin-bottom($h4-sizes); }
+.h5 { @include font-size($h6-sizes); @include margin-bottom($h5-sizes); }
+.h6 { @include font-size($h6-sizes); @include margin-bottom($h6-sizes); }
+.hm { @include font-size($md-sizes); @include margin-bottom($md-sizes); }
+}
+
+.hgroup {
+  & > .h1 { margin-bottom: $space-sm; }
+  & > .h2 { margin-bottom: $space-xs; }
+  & > .h3 { margin-bottom: 0; }
+  & > .h4 { margin-bottom: 0; }
+  & > .h5 { margin-bottom: 0; }
+  & > .h6 { margin-bottom: 0; }
+  & > .hm { margin-bottom: 0; }
+
+  & > .h1:last-child { @include margin-bottom($h1-sizes, false); }
+  & > .h2:last-child { @include margin-bottom($h2-sizes, false); }
+  & > .h3:last-child { @include margin-bottom($h3-sizes, false); }
+  & > .h4:last-child { @include margin-bottom($h4-sizes, false); }
+  & > .h5:last-child { @include margin-bottom($h5-sizes, false); }
+  & > .h6:last-child { @include margin-bottom($h6-sizes, false); }
+  & > .hm:last-child { @include margin-bottom($md-sizes, false); }
+}
+
+.heading--large {
+  @extend .h1;
+  font-weight: bold;
+}
+
+.heading--large-normal {
+  @extend .h1;
+}
+
+.heading--medium {
+  @extend .h2;
+}
+
+.heading--heavy {
+  @extend .h2;
+  font-weight: bold;
+}
+
+.heading--light {
+  @extend .h4;
+  @include phone {
+    font-weight: bold;
+  }
+}
+
+.heading--dek {
+  @extend .h5;
+  color: $color-999;
+}
+
+.heading--muted {
+  @extend .hm;
+  color: $color-999;
+  text-transform: uppercase;
+  font-weight: bold;
+  & > a { @include anchor-quiet; }
+}
+
+.heading--module-header {
+  @extend .heading--muted;
+  border-top: $divider-border-dark;
+  padding-top: 0.35em;
+  .heading--module-link {
+  }
+}
+
+.hgroup--heavy-center {
+  text-align: center;
+  margin: $space-lg 0;
+}
+
+.heading--dek-center {
+  width: percentage(3/4);
+  margin-left: auto;
+  margin-right: auto;
+}
+
