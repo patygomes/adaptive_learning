@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title %> | Adaptive Learning | EdSurge</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title><%= page_title_helper %></title>
+  <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700' rel='stylesheet" unless Rails.env.test? %>
+  <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Merriweather:400italic,400,700' rel='stylesheet" unless Rails.env.test? %>
+  <%= load_stylesheets %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<%= render "layouts/navbar" %>
 
 <%= yield %>
 
