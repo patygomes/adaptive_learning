@@ -7,6 +7,14 @@
   p
     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero dolor, sollicitudin a tempor nec, vulputate non enim. Nulla porttitor sed ex in fringilla. Morbi pharetra nisi quis dolor porta dignissim. Nullam finibus metus non imperdiet rhoncus. Aliquam semper nisl non venenatis sollicitudin. Aliquam faucibus ultrices arcu vitae rutrum. Vivamus dignissim sem eu quam commodo, in vehicula magna tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam cursus quam risus, id interdum risus lobortis in.
 
+  .js-audio-player
+    .js-audio-player-mp3 src="#{asset_path('pcn.mp3')}"
+    = image_tag "play-button.png", class:"js-audio-player-play-button audio--buttons"
+    = image_tag "pause-button.png", class:"js-audio-player-pause-button audio--buttons hidden"
+
+  / audio controls="controls"
+  /   source src="#{asset_path('pcn.mp3')}" type="audio/mpeg"
+  /   Your browser does not support the audio element.
 
   p
     | Aliquam lobortis velit vitae ex volutpat venenatis. Etiam in mollis ante, in semper nulla. Nunc vel congue mi. Phasellus pretium posuere diam, sed aliquet metus placerat sed. Etiam gravida quis eros eget condimentum. Aenean egestas lorem sapien, nec vehicula nisi gravida at. Sed turpis dolor, semper pretium tortor vitae, congue vulputate mi.
