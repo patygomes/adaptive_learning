@@ -67,15 +67,15 @@ $color-sector-research: #008bb9;
 // ========================================================
 // Fonts
 // ========================================================
-$font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$font-family-serif: "Merriweather", Georgia, "Times New Roman", serif;
+$font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$font-family-headings: 'Roboto Slab', "Merriweather", Georgia, "Times New Roman", serif;
 
 $vertical-rhythm: 6px;
 
 $xl-sizes: 48px $vertical-rhythm * 9;
-$h1-sizes: 36px $vertical-rhythm * 7;
-$h2-sizes: 30px $vertical-rhythm * 6;
-$h3-sizes: 24px $vertical-rhythm * 5;
+$h1-sizes: 36px 30px;
+$h2-sizes: 28px 15px;
+$h3-sizes: 24px 15px;
 $h4-sizes: 21px $vertical-rhythm * 5;
 $h5-sizes: 18px $vertical-rhythm * 4;
 $h6-sizes: 16px $vertical-rhythm * 4;
@@ -284,6 +284,14 @@ $desktop-min: $tablet-max + 1;
   & > .h6:last-child { @include margin-bottom($h6-sizes, false); }
   & > .hm:last-child { @include margin-bottom($md-sizes, false); }
 }
+
+.pure-hidden-phone { @include hidden-phone; }
+.pure-hidden-tablet { @include hidden-tablet; }
+.pure-hidden-desktop { @include hidden-desktop; }
+.pure-hidden-non-phone { @include hidden-non-phone; }
+.pure-hidden-non-tablet { @include hidden-non-tablet; }
+.pure-hidden-non-desktop { @include hidden-non-desktop; }
+
 
 .heading--large {
   @extend .h1;

@@ -1,15 +1,15 @@
 .textblock {
-  @include font-size($h5-sizes);
   @include clearfix;
-  font-family: $font-family-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 20px;
   letter-spacing: -0.03em;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  > p, h4, ul, ol, h1, h2, h3, h4, h5, h6 > blockquote, table, iframe {
+  p, h4, ul, ol, h1, h2, h3, h4, h5, h6 > blockquote, table, iframe {
     margin-bottom: $vertical-rhythm * 5;
     @include non-phone {
       margin-right: 20%;
@@ -62,13 +62,23 @@
   td {
     padding: $space-sm $space-md;
   }
-  h1, h2, h3, h4 {
+  h1, h2 {
+    font-family: $font-family-headings;
+  }
+  h3, h4 {
     font-weight: bold;
+    font-family: $font-family;
   }
   h1 { @include font-size($h1-sizes); @include margin-bottom($h1-sizes); }
   h2 { @include font-size($h2-sizes); @include margin-bottom($h2-sizes); }
   h3 { @include font-size($h3-sizes); @include margin-bottom($h3-sizes); }
-  h4 { @include font-size($h4-sizes); @include margin-bottom($h4-sizes); color: $color-666; }
+  h4 { @include font-size($h4-sizes); @include margin-bottom($h4-sizes); }
 
+}
+
+.textblock--grey-background {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $color-eee;
 }
 
