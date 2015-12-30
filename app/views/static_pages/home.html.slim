@@ -4,6 +4,9 @@
 
   h1 Adaptive Learning Home
 
+  .textblock--aside
+    | A
+
   p
     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero dolor, sollicitudin a tempor nec, vulputate non enim. Nulla porttitor sed ex in fringilla. Morbi pharetra nisi quis dolor porta dignissim. Nullam finibus metus non imperdiet rhoncus. Aliquam semper nisl non venenatis sollicitudin. Aliquam faucibus ultrices arcu vitae rutrum. Vivamus dignissim sem eu quam commodo, in vehicula magna tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam cursus quam risus, id interdum risus lobortis in.
 
@@ -12,14 +15,16 @@
     = image_tag "play-button.png", class:"js-audio-player-play-button audio--buttons"
     = image_tag "pause-button.png", class:"js-audio-player-pause-button audio--buttons hidden"
 
-  / audio controls="controls"
-  /   source src="#{asset_path('pcn.mp3')}" type="audio/mpeg"
-  /   Your browser does not support the audio element.
-
   p
     | Aliquam lobortis velit vitae ex volutpat venenatis. Etiam in mollis ante, in semper nulla. Nunc vel congue mi. Phasellus pretium posuere diam, sed aliquet metus placerat sed. Etiam gravida quis eros eget condimentum. Aenean egestas lorem sapien, nec vehicula nisi gravida at. Sed turpis dolor, semper pretium tortor vitae, congue vulputate mi.
 
+
   h2 H2 Headline
+
+  p.textblock--blockquote.textblock--aside
+    = image_tag "SingleOpenQuote.png", class:"textblock--big-quote-image"
+    | Fusce faucibus ipsum sed ante volutpat placerat.
+    = image_tag "SingleClosedQuote.png", class:"textblock--big-quote-image"
 
   p
     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt in justo vitae fringilla. Fusce faucibus ipsum sed ante volutpat placerat. Duis sit amet velit vel nulla gravida lobortis. Vivamus ex quam, varius vitae turpis vitae, volutpat gravida nibh. In hac habitasse platea dictumst. Curabitur fermentum urna non diam aliquam, sit amet molestie enim imperdiet. In nec ipsum ornare, feugiat nisi eu, suscipit ligula. Maecenas at ultrices sapien. Aliquam auctor diam lacus, at blandit sem ornare non. Praesent pretium condimentum dolor eu dignissim.
@@ -28,6 +33,11 @@
 
   p
     | Vivamus sollicitudin erat in facilisis efficitur. Aenean hendrerit luctus mauris in sagittis. Etiam consequat leo vel tempus posuere. Suspendisse potenti. Nullam sit amet est placerat, gravida turpis eget, porttitor enim. Ut condimentum lobortis sapien a finibus. Aenean tincidunt lacinia leo malesuada dictum. Nunc congue justo et sapien vehicula vulputate. Quisque porttitor erat magna, et iaculis libero rhoncus vel. Donec bibendum consectetur felis quis dignissim. In in lacinia diam, quis molestie tellus. Etiam semper, enim vitae varius dignissim, risus arcu sollicitudin mi, quis accumsan neque metus quis dolor. Quisque id porta risus. Proin id libero et metus varius euismod. Suspendisse a varius augue, a tincidunt nulla. Quisque interdum diam ut vehicula fermentum.
+
+  p.textblock--blockquote
+    = image_tag "DoubleOpenQuote.png", class:"textblock--big-quote-image"
+    | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    = image_tag "DoubleClosedQuote.png", class:"textblock--big-quote-image"
 
   p
     | Fusce eu leo varius, faucibus metus non, hendrerit justo. Nunc eget metus id nisl vehicula viverra id ut felis. Praesent at gravida quam. Nulla facilisi. Pellentesque aliquam lacus eu lacus euismod vehicula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean risus urna, efficitur et pharetra quis, ornare id ante. Proin tristique justo ut interdum imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

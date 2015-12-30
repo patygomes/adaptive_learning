@@ -12,7 +12,7 @@
   p, h4, ul, ol, h1, h2, h3, h4, h5, h6 > blockquote, table, iframe {
     margin-bottom: $vertical-rhythm * 5;
     @include non-phone {
-      margin-right: 20%;
+      margin-right: 30%;
       margin-left: 20%;
     }
     li {
@@ -82,3 +82,21 @@
   background-color: $color-eee;
 }
 
+.textblock--blockquote {
+  font-weight: bold;
+  font-size: 31px;
+  font-family: $font-family-headings;
+}
+
+.textblock--big-quote-image {
+  width: 50px !important;
+  margin: 5px;
+}
+
+.textblock--aside {
+  @include non-phone {
+    margin: 2% !important;
+    width: 26%;
+    float: right;
+  }
+}
