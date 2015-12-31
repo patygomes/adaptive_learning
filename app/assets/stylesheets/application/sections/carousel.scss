@@ -1,0 +1,19 @@
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  background-color: $color-eee;
+}
+
+.carousel-body {
+  position: relative;
+  width: percentage (5/3); // NOTE: THIS MUST BE UPDATED IN JAVASCRIPT TO WORK CORRECTLY
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: inline-block;
+  background-color: $color-fff;
+  display: inline-block;
+  width: percentage(1/5);
+  padding: 10px;
+}
