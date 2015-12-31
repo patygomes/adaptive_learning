@@ -16,13 +16,13 @@ $ ->
     $play_button.click ->
       audio.play()
       is_playing = true
-      $play_button.hide()
-      $pause_button.show()
+      $play_button.css({display:"none"})
+      $pause_button.css({display:"block"})
 
     $pause_button.click ->
       audio.pause()
-      $play_button.show()
-      $pause_button.hide()
+      $play_button.css({display:"block"})
+      $pause_button.css({display:"none"})
       is_playing = false
 
 
