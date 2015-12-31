@@ -1,0 +1,43 @@
+- twitter_share_link = ""
+- facebook_share_link = ""
+- pinterest_share_link = ""
+- gplus_share_link = ""
+- email_share_link = ""
+
+
+- twitter_icon = capture do
+  = link_to twitter_share_link, class: "social__link" do
+    i.fa.fa-lg.text--twitter> class="fa-twitter"
+
+- facebook_icon = capture do
+  = link_to facebook_share_link, class: "social__link" do
+    i.fa.fa-lg.text--facebook> class="fa-facebook"
+
+- pinterest_icon = capture do
+  = link_to pinterest_share_link, class: "social__link" do
+    i.fa.fa-lg.text--pinterest> class="fa-pinterest"
+
+- gplus_icon = capture do
+  = link_to gplus_share_link, class: "social__link" do
+    i.fa.fa-lg.text--gplus> class="fa-google-plus"
+
+- email_icon = capture do
+  = link_to email_share_link, class: "social__link" do
+    i.fa.fa-lg.text--email> class="fa-envelope"
+
+
+.textblock--aside
+  = content_tag :div, class: "pure-hidden-phone"
+    ul.social__vertical-stack.text--center
+      li
+        = twitter_icon
+      li
+        = facebook_icon
+      li
+        = pinterest_icon
+      li
+        = gplus_icon
+      li
+        = email_icon
+
+

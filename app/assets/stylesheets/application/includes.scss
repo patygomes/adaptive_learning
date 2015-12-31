@@ -351,3 +351,37 @@ $desktop-min: $tablet-max + 1;
 }
 
 .hidden { display: none; }
+
+
+.bold { font-weight: bold; }
+
+.text--dark { color: $color-333; }
+.text--normal { color: $color-666; }
+.text--muted { color: $color-999; }
+.text--inverse { color: $color-fff; }
+.text--lighter { color: $color-ccc; }
+.text--twitter { color: $color-twitter; }
+.text--facebook { color: $color-facebook; }
+.text--gplus { color: $color-gplus; }
+.text--pinterest { color: $color-pinterest; }
+.text--email { color: $color-email; }
+.text--comment { color: $color-comment; }
+.text--alert { color: $color-alert; }
+.text--capitalize { text-transform: capitalize; }
+.text--uppercase { text-transform: uppercase; }
+.text--sm { @include font-size($sm-sizes); }
+.text--xs { @include font-size($xs-sizes); }
+.text--baseline { vertical-align: baseline; }
+.text--underline { text-decoration: underline; }
+
+.anchor--quiet { @include anchor-quiet; }
+
+.text--center { text-align: center !important; }
+.text--right { text-align: right !important; }
+.text--left { text-align: left !important; }
+
+.text--separator {
+  border-right: 1px solid $color-ccc;
+  margin-right: 10px;
+  padding-right: 10px;
+}
