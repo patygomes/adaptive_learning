@@ -2,18 +2,37 @@
   overflow: hidden;
   width: 100%;
   background-color: $color-eee;
+  padding-bottom: 12px;
 }
 
 .carousel-body {
+  list-style: none;
   position: relative;
-  width: percentage (5/3); // NOTE: THIS MUST BE UPDATED IN JAVASCRIPT TO WORK CORRECTLY
+  width: percentage(5/3); // NOTE: THIS MUST BE UPDATED IN JAVASCRIPT TO WORK CORRECTLY
   overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+
 .carousel-item {
-  display: inline-block;
   background-color: $color-fff;
   display: inline-block;
-  width: percentage(1/5);
-  padding: 10px;
+  width: 19%;
+  margin: 0.5%;
+}
+
+.carousel-button {
+  text-align: center;
+}
+
+.carousel-button-left, .carousel-button-right {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.carousel-button-disabled
+{
+  color: $color-999;
 }
