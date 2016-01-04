@@ -100,3 +100,14 @@
     float: right;
   }
 }
+
+.tweet-quote {
+  background-color: orange;
+  color: $color-333;
+  font-weight: lighter !important;
+  &:hover, &:focus, &:active {
+    cursor: pointer;
+    color: $color-333;
+    text-decoration: none;
+  }
+}
