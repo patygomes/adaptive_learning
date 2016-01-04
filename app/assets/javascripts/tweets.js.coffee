@@ -14,7 +14,6 @@ $ ->
       text = $html_element.text()
       page_url = window.location.href
       tweet_length = text.length
-      console.log(text.length)
       if tweet_length > 140
         text = text.substring(0,137) + "..."
         tweet_length = 140
@@ -33,6 +32,33 @@ $ ->
       $html_element.attr("target", "_blank")
 
 
+    fade_out = ($element, delay, duration) ->
+      $element.delay(delay).fadeTo duration, 0.5, ->
+        fade_in($element, delay, duration)
+    fade_in = ($element, delay, duration) ->
+      $element.delay(delay).fadeTo duration, 1, ->
+        fade_out($element, delay, duration)
+
+
+    addUniqueTwitterSelector = ($html_element) ->
+      randomString = "" + Math.floor(Math.random() * 10000)
+      $html_element.addClass("js-temporary-tweet-" + randomString)
+      $(".js-temporary-tweet-" + randomString).mouseenter ->
+        $(this).after("<i class='fa text--twitter fa-twitter js-temporary-tweet-icon-" + randomString + "'></span>")
+        fade_out($(".js-temporary-tweet-icon-" + randomString), 0, 1000);
+      $(".js-temporary-tweet-" + randomString).mouseleave ->
+        $(".js-temporary-tweet-icon-" + randomString).remove()
 
     $tweet_quotes.each ->
       addTwitterLinkToSpan($(@))
+      addUniqueTwitterSelector($(@))
+
+
+
+
+
+
+
+
+
+
